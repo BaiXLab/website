@@ -1,0 +1,58 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/people/pi/XuechunziBai/profile_page.html",
+      "/posts/people/phd/demo1/profile_page.html",
+      "/posts/people/master/demo1/profile_page.html",
+      "/posts/people/master/demo2/profile_page.html",
+      "/posts/people/master/demo3/profile_page.html",
+      "/posts/people/master/Yuhao Zhu/profile_page.html",
+      "/posts/people/undergrad/demo1/profile_page.html",
+      "/posts/people/undergrad/demo2/profile_page.html",
+      "/posts/research/ImplicitLLM/research_profile.html",
+      "/posts/research/Multidimensional/research_profile.html",
+      "/posts/research/Globally/research_profile.html",
+      "/posts/research/Diversity/research_profile.html",
+      "/posts/research/Demo/research_profile.html",
+      "/posts/teaching/Globally/teaching-demo.html"
+    ]
+  },
+  {
+    "listing": "/posts/people/undergrad/demo2/profile_page.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/people/master/Yuhao Zhu/profile_page.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/people/master/demo2/profile_page.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/people/phd/demo1/profile_page.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/people/pi/XuechunziBai/profile_page.html",
+    "items": [
+      "/posts/research/ImplicitLLM/research_profile.html",
+      "/posts/research/Multidimensional/research_profile.html",
+      "/posts/research/Globally/research_profile.html",
+      "/posts/research/Diversity/research_profile.html"
+    ]
+  },
+  {
+    "listing": "/posts/people/master/demo3/profile_page.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/people/master/demo1/profile_page.html",
+    "items": []
+  },
+  {
+    "listing": "/posts/people/undergrad/demo1/profile_page.html",
+    "items": []
+  }
+]

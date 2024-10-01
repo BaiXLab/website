@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>BaiX Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-pi .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-pi'] = new List('listing-pi', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-phd .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-phd'] = new List('listing-phd', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-master .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-master'] = new List('listing-master', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-undergrad .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-undergrad'] = new List('listing-undergrad', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-research .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-author','listing-title','listing-image','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 4,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-research'] = new List('listing-research', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-teaching .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-subtitle','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-teaching'] = new List('listing-teaching', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">BaiX Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./#Welcome" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#People" rel="" target="">
+ <span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#Research" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./#Teaching" rel="" target="">
+ <span class="menu-text">Teaching</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/BaiXLab">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/psymichaelzhu/BaiXLab/wiki/Random-forest">
+            Lab Wiki
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="explore-exploit">explore-exploit</div><div class="category" data-category="language model">language model</div><div class="category" data-category="rational analysis">rational analysis</div><div class="category" data-category="social cognition">social cognition</div><div class="category" data-category="stereotype">stereotype</div></div></div>
+<!-- main -->
+<div class="quarto-about-marquee column-page-left">
+  <div class="about-image-container">
+  </div>
+  <div class="about-contents">
+     <main class="content column-page-left" id="quarto-document-content">
+<h1 id="Welcome">
+<p>Welcome to the BaiX Lab</p>
+</h1>
+<p>Our research studies the origin and evolution of mental representations of human groups. In particular, we take a dynamic perspective by asking two essentially interlinked questions: First, how do individual minds adaptively but selectively construct the social world? Second, how does the constructed social world mold individual minds?</p>
+<p><em>Dr.Bai will be reviewing materials for postdoc researcher, graduate student, and research assistant positions for the 2024-25 cycle, see details in this <a href="https://docs.google.com/document/d/1JW5j8dAAIbFh9dqOvugFkJ2GBon9CYhEoASSvwzZndk/edit?usp=sharing">doc</a></em></p>
+<hr>
+<h1 id="People">
+<p>People</p>
+</h1>
+<div class="grid people-container" style="display: flex">
+<div class="people-block">
+<h2 class="people-title">
+<p>Director</p>
+</h2>
+<div id="listing-pi" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="stereotype,rational analysis,social cognition,language model,explore-exploit" data-listing-file-modified-sort="1727061395772" data-listing-reading-time-sort="1">
+<a href="./posts/people/pi/XuechunziBai/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/pi/XuechunziBai/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Xuechunzi Bai
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+<div class="people-block">
+<h2 class="people-title">
+<p>PhD Students</p>
+</h2>
+<div id="listing-phd" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="stereotype,language model" data-listing-file-modified-sort="1727055645309" data-listing-reading-time-sort="1">
+<a href="./posts/people/phd/demo1/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/phd/demo1/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Member
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+<div class="people-block">
+<h2 class="people-title">
+<p>Master Students</p>
+</h2>
+<div id="listing-master" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="social cognition" data-listing-file-modified-sort="1727052918409" data-listing-reading-time-sort="1">
+<a href="./posts/people/master/demo1/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/master/demo1/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Member
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="stereotype" data-listing-file-modified-sort="1727055698225" data-listing-reading-time-sort="1">
+<a href="./posts/people/master/demo2/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/master/demo2/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Member
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="stereotype,explore-exploit" data-listing-file-modified-sort="1727055721965" data-listing-reading-time-sort="1">
+<a href="./posts/people/master/demo3/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/master/demo3/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Member
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="rational analysis,social cognition,explore-exploit" data-listing-file-modified-sort="1727061435882" data-listing-reading-time-sort="1">
+<a href="./posts/people/master/Yuhao Zhu/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/master/Yuhao Zhu/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Yuhao Zhu
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+<div class="people-block">
+<h2 class="people-title">
+<p>Undergraduate Students</p>
+</h2>
+<div id="listing-undergrad" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="" data-listing-file-modified-sort="1727055665734" data-listing-reading-time-sort="1">
+<a href="./posts/people/undergrad/demo1/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/undergrad/demo1/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Member
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="" data-listing-file-modified-sort="1727055672672" data-listing-reading-time-sort="1">
+<a href="./posts/people/undergrad/demo2/profile_page.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left borderless">
+<p class="card-img-top">
+<img src="./posts/people/undergrad/demo2/profile_picture.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Member
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+</div>
+<details class="custom-details" style="margin-bottom: 0px">
+<summary>
+Collaborators
+</summary>
+<ul>
+<li><a href="https://tlab.uchicago.edu/">Alexander Todorov</a></li>
+<li><a href="https://www.fiskelab.org/">Susan Fiske</a></li>
+<li><a href="https://cocosci.princeton.edu/tom/tom.php">Tom Griffiths</a></li>
+</ul>
+</details>
+<details class="custom-details">
+<summary>
+Alumni
+</summary>
+<ul>
+<li><a href="posts/teaching/Yuhao1/Yuhao1.qmd">Alumni1 (Currently at Yale)</a></li>
+<li><a href="posts/teaching/Yuhao2/Yuhao2.qmd">Alumni2 (Currently at MIT)</a></li>
+<li><a href="posts/teaching/Yuhao3/Yuhao3.qmd">Alumni3 (Currently at MIT)</a></li>
+</ul>
+</details>
+<hr>
+<h1 id="Research">
+<p>Research</p>
+</h1>
+<div id="listing-research" class="quarto-listing quarto-listing-container-default">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="stereotype,language model" data-listing-date-sort="1716526800000" data-listing-file-modified-sort="1727055586252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./posts/research/ImplicitLLM/research_profile.html"> <img src="./posts/research/ImplicitLLM/cover.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/research/ImplicitLLM/research_profile.html">
+<h3 class="no-anchor listing-title">
+Measuring implicit bias in explicitly unbiased large language models
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stereotype'); return false;">
+stereotype
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('language model'); return false;">
+language model
+</div>
+</div>
+<a href="./posts/research/ImplicitLLM/research_profile.html">
+</a><div class="listing-description"><a href="./posts/research/ImplicitLLM/research_profile.html">
+</a><div class="reference-container"><a href="./posts/research/ImplicitLLM/research_profile.html">
+</a><div class="info"><a href="./posts/research/ImplicitLLM/research_profile.html">
+</a><a>Bai, X., Wang, A., Sucholutsky, I., &amp; Griffiths, T. L. (under review)</a>
+</div>
+<div class="materials">
+<a href="https://arxiv.org/abs/2402.04105" class="link material">[preprint]</a>
+</div>
+</div>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/research/ImplicitLLM/research_profile.html">
+<div class="listing-date">
+May 24, 2024
+</div>
+<div class="listing-author">
+Xuechunzi Bai, Angelina Wang, Ilia Sucholutsky, Thomas L. Griffiths
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="stereotype,explore-exploit,rational analysis" data-listing-date-sort="1711256400000" data-listing-file-modified-sort="1727058098412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./posts/research/Multidimensional/research_profile.html"> <img src="./posts/research/Multidimensional/cover.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/research/Multidimensional/research_profile.html">
+<h3 class="no-anchor listing-title">
+Multidimensional Stereotypes Emerge Spontaneously When Exploration
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stereotype'); return false;">
+stereotype
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('explore-exploit'); return false;">
+explore-exploit
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('rational analysis'); return false;">
+rational analysis
+</div>
+</div>
+<a href="./posts/research/Multidimensional/research_profile.html">
+</a><div class="listing-description"><a href="./posts/research/Multidimensional/research_profile.html">
+</a><div class="reference-container"><a href="./posts/research/Multidimensional/research_profile.html">
+</a><div class="info"><a href="./posts/research/Multidimensional/research_profile.html">
+</a><a>Bai, X., Griffiths, T. L., &amp; Fiske, S. T. (under review)</a>
+</div>
+<div class="materials">
+<a href="https://osf.io/preprints/psyarxiv/mbuhv" class="link material">[preprint]</a> <a href="https://www.xuechunzibai.com/_files/ugd/508ff5_440087316cf94a3b92b713edc40c157b.pdf" class="link material">[slides]</a> <a href="https://drive.google.com/file/d/1UcYzko75rxW869JJo6GsUSJ_OHC65hcq/view?usp=sharing" class="link material">[model]</a>
+</div>
+</div>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/research/Multidimensional/research_profile.html">
+<div class="listing-date">
+Mar 24, 2024
+</div>
+<div class="listing-author">
+Xuechunzi Bai, Thomas L. Griffiths, Susan T. Fiske
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="stereotype,rational analysis,explore-exploit" data-listing-date-sort="1648789200000" data-listing-file-modified-sort="1727058170386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./posts/research/Globally/research_profile.html"> <img src="./posts/research/Globally/cover.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/research/Globally/research_profile.html">
+<h3 class="no-anchor listing-title">
+Globally Inaccurate Stereotypes Can Result From Locally Adaptive Exploration
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stereotype'); return false;">
+stereotype
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('rational analysis'); return false;">
+rational analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('explore-exploit'); return false;">
+explore-exploit
+</div>
+</div>
+<a href="./posts/research/Globally/research_profile.html">
+</a><div class="listing-description"><a href="./posts/research/Globally/research_profile.html">
+</a><div class="reference-container"><a href="./posts/research/Globally/research_profile.html">
+</a><div class="info"><a href="./posts/research/Globally/research_profile.html">
+</a><a>Bai, X., Fiske, S. T., &amp; Griffiths, T. L. (2022)</a> <a href="https://doi.org/10.1177/09567976211045929" class="link"><em>Psychological Science</em></a>
+</div>
+<div class="materials">
+<a href="https://github.com/baixuechunzi/StereotypeBandit/blob/master/presentation/BaiFiskeGriffiths2021(July%204).pdf" class="link material">[slides]</a> <a href="https://github.com/baixuechunzi/StereotypeBandit" class="link material">[data &amp; code]</a> <a href="https://osf.io/preprints/psyarxiv/mbuhv" class="link material">[talk]</a> <a href="file.pdf" class="link material">[pdf]</a>
+</div>
+</div>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/research/Globally/research_profile.html">
+<div class="listing-date">
+Apr 1, 2022
+</div>
+<div class="listing-author">
+Xuechunzi Bai, Fiske Susan, Thomas L. Griffiths
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="stereotype,social cognition" data-listing-date-sort="1586754000000" data-listing-file-modified-sort="1727056131746" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="thumbnail">
+<p><a href="./posts/research/Diversity/research_profile.html"> <img src="./posts/research/Diversity/cover.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/research/Diversity/research_profile.html">
+<h3 class="no-anchor listing-title">
+As diversity increases, people paradoxically perceive social groups as more similar
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('stereotype'); return false;">
+stereotype
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('social cognition'); return false;">
+social cognition
+</div>
+</div>
+<a href="./posts/research/Diversity/research_profile.html">
+</a><div class="listing-description"><a href="./posts/research/Diversity/research_profile.html">
+</a><div class="reference-container"><a href="./posts/research/Diversity/research_profile.html">
+</a><div class="info"><a href="./posts/research/Diversity/research_profile.html">
+</a><a>Bai, X., Ramos, M.R., &amp; Fiske, S. T. (2020)</a> <a href="https://www.pnas.org/doi/full/10.1073/pnas.2000333117" class="link"><em>PNAS</em></a>
+</div>
+<div class="materials">
+<a href="https://www.xuechunzibai.com/_files/ugd/508ff5_cfca7e84bacb408a977cf6505232ec51.pdf" class="link material">[pdf]</a> <a href="https://www.xuechunzibai.com/_files/ugd/508ff5_a98ae04923344f19a9dad74cb306eb7f.pdf" class="link material">[slides]</a> <a href="https://github.com/baixuechunzi/Social-Diversity-Stereotype-Content-Similarity" class="link material">[data&amp;code]</a>
+</div>
+</div>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/research/Diversity/research_profile.html">
+<div class="listing-date">
+Apr 13, 2020
+</div>
+<div class="listing-author">
+Xuechunzi Bai, Miguel R. Ramosc, Susan T. Fiske
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="social cognition" data-listing-date-sort="1546322400000" data-listing-file-modified-sort="1727056043670" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./posts/research/Demo/research_profile.html"> <img data-src="./posts/research/Demo/cover.jpg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/research/Demo/research_profile.html">
+<h3 class="no-anchor listing-title">
+Demo
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('social cognition'); return false;">
+social cognition
+</div>
+</div>
+<a href="./posts/research/Demo/research_profile.html">
+</a><div class="listing-description"><a href="./posts/research/Demo/research_profile.html">
+</a><div class="reference-container"><a href="./posts/research/Demo/research_profile.html">
+</a><div class="info"><a href="./posts/research/Demo/research_profile.html">
+</a><a>Author (year)</a>
+</div>
+<div class="materials">
+<a href="https://www.google.com/" class="link material">[pdf]</a> <a href="https://www.google.com/" class="link material">[slides]</a> <a href="https://www.google.com/" class="link material">[data&amp;code]</a>
+</div>
+</div>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/research/Demo/research_profile.html">
+<div class="listing-date">
+Jan 1, 2019
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="research-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+<hr>
+<h1 id="Teaching">
+<p>Teaching</p>
+</h1>
+<div id="listing-teaching" class="quarto-listing quarto-listing-container-table">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Course Info
+</th>
+<th>
+Title
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="stereotype,social cognition" data-listing-file-modified-sort="1727056230528" data-listing-reading-time-sort="7" data-listing-title-sort="Topics in Social Psychology" data-listing-filename-sort="teaching-demo.qmd">
+<td>
+<span class="listing-subtitle">
+<div class="course-info">
+<a>PSYC 44600</a> <a>2025 fall</a>
+</div>
+</span>
+</td>
+<td>
+<a href="./posts/teaching/Globally/teaching-demo.html" class="title listing-title">Topics in Social Psychology</a>
+</td>
+<td>
+<span class="listing-description">Social psychology is theoretically a central science. However, in practice, social psychology is isolated. Consciously engaging in interdisciplinary teaching might help rebuild this bridge. In this course, students come from different disciplines and are encouraged to think across fields.</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
+
+</main> 
+  </div>
+</div>
+ <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
